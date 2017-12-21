@@ -47,7 +47,6 @@ public class Plane : MonoBehaviour, IHealth
 
     private void Update()
     {
-
         v1 = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         trans.Translate(v1 * Time.deltaTime * speed);
         if (Input.GetButtonDown("Fire1"))
