@@ -8,22 +8,19 @@ using UnityEditor;
 #endif
 
 public class PauseManager : MonoBehaviour {
-    [SerializeField]
-    private AudioMixerSnapshot paused,unpaused;
-    [SerializeField]
-    private CanvasGroup pauseGroup;
-    [SerializeField]
-    private CanvasGroup settingGroup;
+    [SerializeField] private AudioMixerSnapshot paused,unpaused;
+    [SerializeField] private CanvasGroup pauseGroup;
+    [SerializeField] private CanvasGroup settingGroup;
 
-    private bool isPaused = true;
+    private bool isPaused = false;
 
     private Stack<CanvasGroup> canvasGroupStack = new Stack<CanvasGroup>();
     private List<CanvasGroup> canvasGroupList = new List<CanvasGroup>();
 
     private void Start()
     {
-        Pause();
-        Displaymenu();
+        canvasGroupList.Add(pauseGroup);
+        canvasGroupList.Add(settingGroup);
     }
 
     private void Update()
@@ -44,35 +41,11 @@ public class PauseManager : MonoBehaviour {
             unpaused.TransitionTo(.01f);
         }
     }
-    public void Pause()
-    {
-        isPaused = !isPaused;
-        Time.timeScale = isPaused ? 0 : 1;
-        pauseGroup.alpha = isPaused ? 1 : 0;
-        pauseGroup.interactable = isPaused ? true : false;
-        Lowpass();
-    }
-    public void Setting()
-    {
-        canvasGroupStack.Push(settingGroup);
-        //pauseGroup.alpha = 0;
-        //pauseGroup.interactable = false;
-        //pauseGroup.blocksRaycasts = false;
-        Displaymenu();    
-    }
-    public void Exit()
-    {
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-#else 
-        Application.Quit();
-#endif
-    }
     private void Esc()
     {
         if (!isPaused && canvasGroupStack.Count == 0)
         {
-            Pause();
+            isPaused = !isPaused;
             canvasGroupStack.Push(pauseGroup);
         }
         else
@@ -86,6 +59,29 @@ public class PauseManager : MonoBehaviour {
         }
         Displaymenu();
     }
+    public void Pause()
+    {
+        isPaused = !isPaused;
+        if (canvasGroupStack.Count > 0)
+        {
+            canvasGroupStack.Pop();
+        }
+        Displaymenu();
+    }
+    public void Setting()
+    {
+        canvasGroupStack.Push(settingGroup);
+        Displaymenu();    
+    }
+    public void Exit()
+    {
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else 
+        Application.Quit();
+#endif
+    }
+
     private void Displaymenu()
     {
         foreach (var item in canvasGroupList)
