@@ -60,7 +60,6 @@ public class Plane : MonoBehaviour, IHealth
     {
         Move(v1);
     }
-
     private void ClampFrame()
     {
         trans.position = new Vector3(Mathf.Clamp(trans.position.x, MinX, MaxX),
