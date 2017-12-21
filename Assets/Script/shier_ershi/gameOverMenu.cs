@@ -11,12 +11,16 @@ public class gameOverMenu : MonoBehaviour
     private void Start()
     {
         director = LevelDirector.Instance;
-        director.GameOverAction += DisplayText;
+        //director.GameOverAction += DisplayText;
         gameOverGroup.alpha = 0;
+        gameOverGroup.interactable = false;
+        gameOverGroup.blocksRaycasts = false;
     }
 
     public void DisplayText()
     {
         gameOverGroup.alpha = 1;
+        gameOverGroup.interactable = true;
+        gameOverGroup.blocksRaycasts = true;
     }
 }
