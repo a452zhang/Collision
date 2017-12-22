@@ -209,7 +209,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Setting
 --- !u!222 &610512955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -371,7 +371,7 @@ Transform:
   m_GameObject: {fileID: 1086567916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.02, z: 0}
-  m_LocalScale: {x: 20.6, y: 11.4, z: 1}
+  m_LocalScale: {x: 17.8, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 372157146}
   m_RootOrder: 0
@@ -513,7 +513,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1132150387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 314.5, y: 177, z: 0}
+  m_LocalPosition: {x: 295, y: 166, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 684287202}
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 1656041821}
   - component: {fileID: 1656041820}
   m_Layer: 5
-  m_Name: GameStart
+  m_Name: Radiant!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -676,7 +676,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1656041818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6950073, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 684287202}
@@ -684,8 +684,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -3}
-  m_SizeDelta: {x: 0, y: -6}
+  m_AnchoredPosition: {x: 0, y: 0.695}
+  m_SizeDelta: {x: 0, y: 1.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656041820
 MonoBehaviour:
@@ -752,7 +752,7 @@ Transform:
   m_GameObject: {fileID: 1727820106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.02, z: 0}
-  m_LocalScale: {x: 20.6, y: 11.4, z: 1}
+  m_LocalScale: {x: 17.8, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 372157146}
   m_RootOrder: 1
@@ -1085,7 +1085,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -1181,7 +1181,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Game Start
 --- !u!222 &1979711074
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1366,7 +1366,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Credit
 --- !u!222 &2146214876
 CanvasRenderer:
   m_ObjectHideFlags: 0

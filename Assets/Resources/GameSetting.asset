@@ -11,4 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041362b6d16b23541983221bdcb11759, type: 3}
   m_Name: GameSetting
   m_EditorClassIdentifier: 
-  ma: 0
+  musicValume: -11.42857
+  effectValume: -52.142853
