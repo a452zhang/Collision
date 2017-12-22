@@ -1,0 +1,26 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SettingPannel : MonoBehaviour {
+    [SerializeField]
+    private Slider musicSlider;
+    [SerializeField]
+    private Slider effectSlider;
+
+	private void Start () {
+        musicSlider.value = AudioManager.Instance.MusicValume;
+        effectSlider.value = AudioManager.Instance.EffectValume;
+    }
+
+    public void OnMusicSlider(float value)
+    {
+        AudioManager.Instance.MusicValume = value;
+    }
+
+    public void OnEffectSlider(float value)
+    {
+        AudioManager.Instance.EffectValume = value;
+    }
+}

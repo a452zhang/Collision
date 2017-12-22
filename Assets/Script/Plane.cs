@@ -72,7 +72,7 @@ public class Plane : MonoBehaviour, IHealth
         rig.velocity = v1 * speed;
     }
 
-    private IEnumerator Decorate()
+    private IEnumerator Decorate()    
     {
         yield return new WaitForSeconds(2);
         coll.enabled = true;

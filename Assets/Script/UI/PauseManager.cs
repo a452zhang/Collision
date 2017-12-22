@@ -21,6 +21,7 @@ public class PauseManager : MonoBehaviour {
     {
         canvasGroupList.Add(pauseGroup);
         canvasGroupList.Add(settingGroup);
+        Displaymenu();
     }
 
     private void Update()
@@ -41,7 +42,7 @@ public class PauseManager : MonoBehaviour {
             unpaused.TransitionTo(.01f);
         }
     }
-    private void Esc()
+    public void Esc()
     {
         if (!isPaused && canvasGroupStack.Count == 0)
         {
