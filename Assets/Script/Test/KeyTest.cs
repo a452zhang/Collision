@@ -13,11 +13,11 @@ public class KeyTest : MonoBehaviour {
 	private void Update () {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            StartCoroutine(Test.FadeImage(image1,5f,color1));
+            StartCoroutine(FadeInOut.FadeImage(image1,5f,color1));
         }
         else if (Input.GetKeyDown(KeyCode.B))
         {
-            StartCoroutine(Test.FadeImage(image2,5f,color2));
+            StartCoroutine(FadeInOut.FadeImage(image2,5f,color2));
         }
 	}
 }
