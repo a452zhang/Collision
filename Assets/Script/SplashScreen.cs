@@ -10,7 +10,7 @@ public class SplashScreen : MonoBehaviour {
 
 	private void Start () {
         UIManager.Instance.FadeOn(false, 1f);
-
+        StartCoroutine(LoadFirstLevel());
 	}
 
     private IEnumerator LoadFirstLevel()

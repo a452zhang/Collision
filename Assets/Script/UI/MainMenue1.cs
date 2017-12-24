@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class MainMenue : MonoBehaviour
+public class MainMenue1 : MonoBehaviour
 {
     [SerializeField]
     private string loadSceneName;
@@ -38,33 +37,16 @@ public class MainMenue : MonoBehaviour
 
     public void Esc()
     {
-        if (canvasGroupStack.Count <= 1) return;
-        canvasGroupStack.Pop();
-        Displaymenu();
+        if (canvasGroupStack.Count <= 1)
+        {
+            canvasGroupStack.Pop();
+            Displaymenu();
+        }
     }
 
     public void StartButton()
     {
         UIManager.Instance.FadeOn(true, 1f);
-        StartCoroutine(StartLevel());
-    }
-
-    public void OptionButton()
-    {
-        canvasGroupStack.Push(optionGroup);
-        Displaymenu();
-    }
-
-    public void CreditButton()
-    {
-        canvasGroupStack.Push(creditGroup);
-        Displaymenu();
-    }
-
-    private IEnumerator StartLevel()
-    {
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(loadSceneName);
     }
 
     private void Displaymenu()
